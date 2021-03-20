@@ -24,6 +24,13 @@
 			me: 'Tracking',
 			args: ['%cpush(' + options + ');', 'color:cornflowerblue']
 		});
+		if (!options.event) {
+			App.log({
+				me: 'Tracking',
+				fx: 'error',
+				args: ['Missing event property in push call']
+			});
+		}
 	};
 
 	const push = (options) => {
