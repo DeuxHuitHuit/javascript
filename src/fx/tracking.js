@@ -19,18 +19,19 @@
 	};
 
 	const log = (options) => {
-		options = JSON.stringify(options, null, 2);
-		App.log({
-			me: 'Tracking',
-			args: ['%cpush(' + options + ');', 'color:cornflowerblue']
-		});
-		if (!options.event) {
+		if (!options || !options.event) {
 			App.log({
 				me: 'Tracking',
 				fx: 'error',
 				args: ['Missing event property in push call']
 			});
 		}
+
+		options = JSON.stringify(options, null, 2);
+		App.log({
+			me: 'Tracking',
+			args: ['%cpush(' + options + ');', 'color:cornflowerblue']
+		});
 	};
 
 	const push = (options) => {
