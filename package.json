@@ -20,6 +20,6 @@
   "dependencies": {
     "grunt": "^1.4.1",
     "grunt-complexity": "^1.1.0",
-    "grunt-contrib-jshint": "^3.0.0"
+    "grunt-contrib-jshint": "^3.1.1"
   }
 }
